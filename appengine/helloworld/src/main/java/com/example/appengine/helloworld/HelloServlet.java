@@ -16,12 +16,13 @@
 
 package com.example.appengine.helloworld;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import com.google.appengine.api.utils.SystemProperty;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 // [START example]
 @SuppressWarnings("serial")
@@ -30,7 +31,8 @@ public class HelloServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     PrintWriter out = resp.getWriter();
-    out.println("Hello, world");
+    out.println("Hello, ");
+    out.println(SystemProperty.Environment.version.get());
   }
 }
 // [END example]

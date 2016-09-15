@@ -33,6 +33,10 @@ Copyright 2015 Google Inc. All Rights Reserved.
       <type>jar</type>
       <scope>provided</scope>
     </dependency>
+      <dependency>
+          <groupId>com.google.appengine</groupId>
+          <artifactId>appengine-api-1.0-sdk</artifactId>
+      </dependency>
   </dependencies>
   <build>
     <!-- for hot reload of the web application -->
